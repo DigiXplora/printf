@@ -30,13 +30,14 @@ struct fmt
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
+
 /**
  * typedef struct fmt fmt_t - Struct op
  *
  * @fmt: The format.
  * @fm_t: The function associated.
  */
-typedef struct fmti fmt_t;
+typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
@@ -100,9 +101,9 @@ int write_num(int ind, char bff[], int flags, int width, int precision,
 int length, char padd, char extra_c);
 int write_pointer(char buffer[], int ind, int length,
 int width, int flags, char padd, char extra_c, int padd_start);
-
 int write_unsgnd(int is_negative, int ind,
-char buffer[], int flags, int width, int precision, int size);
+char buffer[],
+int flags, int width, int precision, int size);
 
 /****************** UTILS ******************/
 int is_printable(char);
@@ -113,3 +114,4 @@ long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif /* MAIN_H */
+
