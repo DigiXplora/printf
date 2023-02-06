@@ -63,8 +63,7 @@ int print_pointer(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed
  */
-int print_non_printable(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+int print_non_printable(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
 	int i = 0, offset = 0;
 	char *str = va_arg(types, char *);
